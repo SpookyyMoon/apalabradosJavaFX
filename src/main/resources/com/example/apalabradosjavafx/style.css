@@ -1,0 +1,41 @@
+.labelLetras {
+    -fx-border-radius: 10px;
+    -fx-border-color: #9072e1;
+}
+
+.letrasUsables {
+    -fx-border-radius: 10px;
+    -fx-border-color: grey;
+}
+
+.probarPalabra {
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-border-color: #58419c;
+}
+
+.botonProbarPalabra {
+    -fx-border-radius: 15px;
+    -fx-background-color: #9072e1;
+    -fx-border-color: #58419c;
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+}
+
+.botonProbarPalabra:hover{
+    -fx-cursor: hand;
+}
+
+.letraAcertada{
+    -fx-background-color: #ffe680;
+    -fx-border-radius: 10px;
+    -fx-border-color: #9072e1;
+    -fx-background-radius: 10px;
+}
+
+.letraPosicionAcertada{
+    -fx-border-radius: 10px;
+    -fx-background-color: rgba(144, 114, 225, 0.73);
+    -fx-border-color: #9072e1;
+    -fx-background-radius: 10px;
+}
