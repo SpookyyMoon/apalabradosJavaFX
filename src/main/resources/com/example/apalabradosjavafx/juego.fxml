@@ -10,32 +10,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080" prefWidth="1920" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apalabradosjavafx.JuegoController">
    <children>
       <HBox layoutX="130.0" layoutY="108.0" prefHeight="164.0" prefWidth="844.0" spacing="10.0">
          <children>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra1" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra2" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra3" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra4" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra5" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
@@ -44,27 +43,27 @@
       </HBox>
       <HBox layoutX="130.0" layoutY="281.0" prefHeight="164.0" prefWidth="844.0" spacing="10.0">
          <children>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra6" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra7" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra8" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra9" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra10" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
@@ -73,27 +72,27 @@
       </HBox>
       <HBox layoutX="130.0" layoutY="454.0" prefHeight="164.0" prefWidth="844.0" spacing="10.0">
          <children>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra11" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra12" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra13" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra14" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra15" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
@@ -102,27 +101,27 @@
       </HBox>
       <HBox layoutX="130.0" layoutY="627.0" prefHeight="164.0" prefWidth="844.0" spacing="10.0">
          <children>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra16" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra17" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra18" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra19" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra20" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
@@ -131,27 +130,27 @@
       </HBox>
       <HBox layoutX="130.0" layoutY="800.0" prefHeight="164.0" prefWidth="844.0" spacing="10.0">
          <children>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra21" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra22" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra23" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra24" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
+            <Label fx:id="letra25" alignment="CENTER" prefHeight="166.0" prefWidth="163.0" styleClass="labelLetras" stylesheets="@style.css" text="A" textAlignment="CENTER">
                <font>
                   <Font size="72.0" />
                </font>
