@@ -8,6 +8,13 @@
     -fx-border-color: grey;
 }
 
+.letrasUsadas {
+    -fx-border-radius: 10px;
+    -fx-border-color: grey;
+    -fx-background-color: rgba(128, 128, 128, 0.6);
+    -fx-background-radius: 10px;
+}
+
 .probarPalabra {
     -fx-border-radius: 15px;
     -fx-background-radius: 15px;
