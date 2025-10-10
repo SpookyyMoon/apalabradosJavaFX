@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080" prefWidth="1920" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.apalabradosjavafx.JuegoController">
    <children>
@@ -157,7 +158,7 @@
             </Label>
          </children>
       </HBox>
-      <VBox layoutX="1260.0" layoutY="325.0" prefHeight="428.0" prefWidth="404.0" spacing="10.0">
+      <VBox layoutX="1260.0" layoutY="253.0" prefHeight="428.0" prefWidth="404.0" spacing="10.0">
          <children>
             <HBox prefHeight="104.0" prefWidth="594.0" spacing="10.0">
                <children>
@@ -320,20 +321,35 @@
             </HBox>
          </children>
       </VBox>
-      <TextField fx:id="palabraIntroducir" layoutX="1260.0" layoutY="787.0" prefHeight="54.0" prefWidth="414.0" promptText="Introduce una palabra" styleClass="probarPalabra" stylesheets="@style.css">
+      <TextField fx:id="palabraIntroducir" layoutX="1260.0" layoutY="715.0" prefHeight="54.0" prefWidth="414.0" promptText="Introduce una palabra" styleClass="probarPalabra" stylesheets="@style.css">
          <font>
             <Font size="23.0" />
          </font>
       </TextField>
-      <Button layoutX="1360.0" layoutY="862.0" mnemonicParsing="false" onAction="#palabraAcertar" styleClass="botonProbarPalabra" stylesheets="@style.css" text="Probar palabra">
+      <Button layoutX="1360.0" layoutY="790.0" mnemonicParsing="false" onAction="#palabraAcertar" styleClass="botonProbarPalabra" stylesheets="@style.css" text="Probar palabra">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
-      <ImageView fitHeight="183.0" fitWidth="354.0" layoutX="1290.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="183.0" fitWidth="354.0" layoutX="1290.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@raw/logo.png" />
          </image>
       </ImageView>
+      <Text layoutX="1336.0" layoutY="909.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Palabras acertadas:">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="contadorAciertosLabel" layoutX="1585.0" layoutY="885.0" text=" ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="palabraFallada" layoutX="1241.0" layoutY="935.0" prefHeight="36.0" prefWidth="442.0" text=" ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
