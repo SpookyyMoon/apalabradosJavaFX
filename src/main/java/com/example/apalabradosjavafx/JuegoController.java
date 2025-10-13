@@ -103,66 +103,7 @@ public class JuegoController {
         palabraIntroducir.clear();
         if(!aciertoPalabra(palabra)){
             if(turno < 4){
-                for(int i = 0; i < palabra.length(); i++){
-                    String letra = String.valueOf(palabra.charAt(i));
-                    switch (i) {
-                        case 0:
-                            Label letra1Asignar = (Label) (listaFilas.get(turno)).get(i);
-                            letra1Asignar.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra1Asignar.getStyleClass().clear();
-                                letra1Asignar.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra1Asignar.getStyleClass().clear();
-                                letra1Asignar.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 1:
-                            Label letra2Asignar = (Label) (listaFilas.get(turno)).get(i);
-                            letra2Asignar.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra2Asignar.getStyleClass().clear();
-                                letra2Asignar.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra2Asignar.getStyleClass().clear();
-                                letra2Asignar.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 2:
-                            Label letra3Asignar = (Label) (listaFilas.get(turno)).get(i);
-                            letra3Asignar.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra3Asignar.getStyleClass().clear();
-                                letra3Asignar.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra3Asignar.getStyleClass().clear();
-                                letra3Asignar.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 3:
-                            Label letra4Asignar = (Label) (listaFilas.get(turno)).get(i);
-                            letra4Asignar.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra4Asignar.getStyleClass().clear();
-                                letra4Asignar.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra4Asignar.getStyleClass().clear();
-                                letra4Asignar.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 4:
-                            Label letra5Asignar = (Label) (listaFilas.get(turno)).get(i);
-                            letra5Asignar.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra5Asignar.getStyleClass().clear();
-                                letra5Asignar.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra5Asignar.getStyleClass().clear();
-                                letra5Asignar.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                    }
-                }
+                rellenarLetra(palabra);
                 turno++;
             }
             else if(turno >= 4) {
@@ -229,68 +170,73 @@ public class JuegoController {
             listaPalabras = Arrays.stream(listaPalabras)
                     .filter(string -> !string.equals(palabraAdivinar))
                     .toArray(String[]::new);
-            for(int i = 0; i < palabra.length(); i++){
-                String letra = String.valueOf(palabra.charAt(i));
-                switch (i) {
-                    case 0:
-                        Label letra1Asignar = (Label) (listaFilas.get(turno)).get(i);
-                        letra1Asignar.setText(letra.toUpperCase());
-                        if (comprobarAciertoLetra(letra, i) == 1) {
-                            letra1Asignar.getStyleClass().clear();
-                            letra1Asignar.getStyleClass().add("letraPosicionAcertada");
-                        } else if (comprobarAciertoLetra(letra, i) == 2) {
-                            letra1Asignar.getStyleClass().clear();
-                            letra1Asignar.getStyleClass().add("letraAcertada");
-                        }
-                        break;
-                    case 1:
-                        Label letra2Asignar = (Label) (listaFilas.get(turno)).get(i);
-                        letra2Asignar.setText(letra.toUpperCase());
-                        if (comprobarAciertoLetra(letra, i) == 1) {
-                            letra2Asignar.getStyleClass().clear();
-                            letra2Asignar.getStyleClass().add("letraPosicionAcertada");
-                        } else if (comprobarAciertoLetra(letra, i) == 2) {
-                            letra2Asignar.getStyleClass().clear();
-                            letra2Asignar.getStyleClass().add("letraAcertada");
-                        }
-                        break;
-                    case 2:
-                        Label letra3Asignar = (Label) (listaFilas.get(turno)).get(i);
-                        letra3Asignar.setText(letra.toUpperCase());
-                        if (comprobarAciertoLetra(letra, i) == 1) {
-                            letra3Asignar.getStyleClass().clear();
-                            letra3Asignar.getStyleClass().add("letraPosicionAcertada");
-                        } else if (comprobarAciertoLetra(letra, i) == 2) {
-                            letra3Asignar.getStyleClass().clear();
-                            letra3Asignar.getStyleClass().add("letraAcertada");
-                        }
-                        break;
-                    case 3:
-                        Label letra4Asignar = (Label) (listaFilas.get(turno)).get(i);
-                        letra4Asignar.setText(letra.toUpperCase());
-                        if (comprobarAciertoLetra(letra, i) == 1) {
-                            letra4Asignar.getStyleClass().clear();
-                            letra4Asignar.getStyleClass().add("letraPosicionAcertada");
-                        } else if (comprobarAciertoLetra(letra, i) == 2) {
-                            letra4Asignar.getStyleClass().clear();
-                            letra4Asignar.getStyleClass().add("letraAcertada");
-                        }
-                        break;
-                    case 4:
-                        Label letra5Asignar = (Label) (listaFilas.get(turno)).get(i);
-                        letra5Asignar.setText(letra.toUpperCase());
-                        if (comprobarAciertoLetra(letra, i) == 1) {
-                            letra5Asignar.getStyleClass().clear();
-                            letra5Asignar.getStyleClass().add("letraPosicionAcertada");
-                        } else if (comprobarAciertoLetra(letra, i) == 2) {
-                            letra5Asignar.getStyleClass().clear();
-                            letra5Asignar.getStyleClass().add("letraAcertada");
-                        }
-                        break;
-                }
-            }
+            rellenarLetra(palabra);
             aciertos++;
             initialize();
+        }
+    }
+
+    // Rellenar letras
+    private void rellenarLetra(String palabra) {
+        for(int i = 0; i < palabra.length(); i++){
+            String letra = String.valueOf(palabra.charAt(i));
+            switch (i) {
+                case 0:
+                    Label letra1Asignar = (Label) (listaFilas.get(turno)).get(i);
+                    letra1Asignar.setText(letra.toUpperCase());
+                    if (comprobarAciertoLetra(letra, i) == 1) {
+                        letra1Asignar.getStyleClass().clear();
+                        letra1Asignar.getStyleClass().add("letraPosicionAcertada");
+                    } else if (comprobarAciertoLetra(letra, i) == 2) {
+                        letra1Asignar.getStyleClass().clear();
+                        letra1Asignar.getStyleClass().add("letraAcertada");
+                    }
+                    break;
+                case 1:
+                    Label letra2Asignar = (Label) (listaFilas.get(turno)).get(i);
+                    letra2Asignar.setText(letra.toUpperCase());
+                    if (comprobarAciertoLetra(letra, i) == 1) {
+                        letra2Asignar.getStyleClass().clear();
+                        letra2Asignar.getStyleClass().add("letraPosicionAcertada");
+                    } else if (comprobarAciertoLetra(letra, i) == 2) {
+                        letra2Asignar.getStyleClass().clear();
+                        letra2Asignar.getStyleClass().add("letraAcertada");
+                    }
+                    break;
+                case 2:
+                    Label letra3Asignar = (Label) (listaFilas.get(turno)).get(i);
+                    letra3Asignar.setText(letra.toUpperCase());
+                    if (comprobarAciertoLetra(letra, i) == 1) {
+                        letra3Asignar.getStyleClass().clear();
+                        letra3Asignar.getStyleClass().add("letraPosicionAcertada");
+                    } else if (comprobarAciertoLetra(letra, i) == 2) {
+                        letra3Asignar.getStyleClass().clear();
+                        letra3Asignar.getStyleClass().add("letraAcertada");
+                    }
+                    break;
+                case 3:
+                    Label letra4Asignar = (Label) (listaFilas.get(turno)).get(i);
+                    letra4Asignar.setText(letra.toUpperCase());
+                    if (comprobarAciertoLetra(letra, i) == 1) {
+                        letra4Asignar.getStyleClass().clear();
+                        letra4Asignar.getStyleClass().add("letraPosicionAcertada");
+                    } else if (comprobarAciertoLetra(letra, i) == 2) {
+                        letra4Asignar.getStyleClass().clear();
+                        letra4Asignar.getStyleClass().add("letraAcertada");
+                    }
+                    break;
+                case 4:
+                    Label letra5Asignar = (Label) (listaFilas.get(turno)).get(i);
+                    letra5Asignar.setText(letra.toUpperCase());
+                    if (comprobarAciertoLetra(letra, i) == 1) {
+                        letra5Asignar.getStyleClass().clear();
+                        letra5Asignar.getStyleClass().add("letraPosicionAcertada");
+                    } else if (comprobarAciertoLetra(letra, i) == 2) {
+                        letra5Asignar.getStyleClass().clear();
+                        letra5Asignar.getStyleClass().add("letraAcertada");
+                    }
+                    break;
+            }
         }
     }
 
