@@ -10,6 +10,7 @@ Proyecto llevado a cabo como práctica conjunta para las asignaturas de Interfac
 - Bucle jugable - En caso de adivinar la palabra se elimina de la lista y se continua hasta agotarlas todas, en caso de fallo se reinicia.
 - Conteo de aciertos - Existe un contador que lleva el conteo de las palabras acertadas.
 - Resltado de letras - Las letras se resaltan en función de si hemos acertado la letra y posición (morado) o si solo hemos acertado que esa letra existe en la palabra (amarillo).
+- Resaltado de letras usadas - Aun que podemos volver a usar las letras, estas se resaltan en la lista de la derecha al ser usadas.
 
 ---
 
