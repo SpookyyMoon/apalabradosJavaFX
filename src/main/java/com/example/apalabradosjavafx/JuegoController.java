@@ -92,6 +92,7 @@ public class JuegoController {
             letras.get(i).getStyleClass().add("letrasUsables");
         }
 
+
         // Reinicio turnos
         turno = 0;
 
@@ -99,6 +100,7 @@ public class JuegoController {
 
     @FXML
     protected void palabraAcertar(){
+        palabraFallada.setText(" ");
         String palabra = palabraIntroducir.getText();
         palabraIntroducir.clear();
         if(!aciertoPalabra(palabra)){
