@@ -28,6 +28,7 @@ public class JuegoController {
     // Paneles
     @FXML private Pane oscurecerFondo;
     @FXML private Pane alertBox;
+    @FXML private Pane alertBox2;
 
     // Almacenamiento de la palabra a adivinar
     private String palabraAdivinar;
@@ -196,7 +197,13 @@ public class JuegoController {
                         .toArray(String[]::new);
                 rellenarLetra(palabra);
                 aciertos++;
-                initialize();
+
+                if(listaPalabras.length < 1) {
+                    finPartida();
+                }
+                else {
+                    initialize();
+                }
             }
         }
     }
@@ -273,7 +280,7 @@ public class JuegoController {
 
     // Comprobar acierto partida
     protected boolean aciertoPalabra(String palabra) {
-        if(palabra.equals(palabraAdivinar)){
+        if(palabra.equals(palabraAdivinar)) {
             return true;
         }
         else{
@@ -329,6 +336,13 @@ public class JuegoController {
         }
     }
 
+    @FXML
+    protected void finPartida() {
+        oscurecerFondo.setVisible(true);
+        alertBox2.setVisible(true);
+    }
+
+    @FXML
     protected void reiniciarJuego() {
         oscurecerFondo.setVisible(false);
         alertBox.setVisible(false);

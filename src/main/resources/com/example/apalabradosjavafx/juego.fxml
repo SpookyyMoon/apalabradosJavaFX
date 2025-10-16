@@ -375,12 +375,36 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Button layoutX="294.0" layoutY="455.0" mnemonicParsing="false" onAction="#palabraAcertar" styleClass="botonProbarPalabra" stylesheets="@style.css" text="Volver a jugar">
+            <Button layoutX="294.0" layoutY="455.0" mnemonicParsing="false" onAction="#reiniciarJuego" styleClass="botonProbarPalabra" stylesheets="@style.css" text="Volver a jugar">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
          </children>
       </Pane>
+       <Pane fx:id="alertBox2" layoutX="520.0" layoutY="210.0" prefHeight="624.0" prefWidth="784.0" styleClass="popUpFinalJuego" stylesheets="@style.css" visible="false">
+           <children>
+               <ImageView fitHeight="202.0" fitWidth="425.0" layoutX="179.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="@raw/logo.png" />
+                   </image>
+               </ImageView>
+               <Text layoutX="307.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Has ganado!">
+                   <font>
+                       <Font size="30.0" />
+                   </font>
+               </Text>
+               <Text layoutX="99.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Has acertado todas las palabras del juego">
+                   <font>
+                       <Font size="30.0" />
+                   </font>
+               </Text>
+               <Button layoutX="294.0" layoutY="455.0" mnemonicParsing="false" onAction="#reiniciarJuego" styleClass="botonProbarPalabra" stylesheets="@style.css" text="Volver a jugar">
+                   <font>
+                       <Font size="25.0" />
+                   </font>
+               </Button>
+           </children>
+       </Pane>
    </children>
 </AnchorPane>
