@@ -102,79 +102,90 @@ public class JuegoController {
     protected void palabraAcertar(){
         palabraFallada.setText(" ");
         String palabra = palabraIntroducir.getText();
-        palabraIntroducir.clear();
-        if(!aciertoPalabra(palabra)){
-            if(turno < 4){
-                rellenarLetra(palabra);
-                turno++;
-            }
-            else if(turno >= 4) {
-                for(int i = 0; i < palabra.length(); i++){
-                    String letra = String.valueOf(palabra.charAt(i));
-                    switch (i){
-                        case 0:
-                            letra21.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra21.getStyleClass().clear();
-                                letra21.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra21.getStyleClass().clear();
-                                letra21.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 1:
-                            letra22.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra22.getStyleClass().clear();
-                                letra22.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra22.getStyleClass().clear();
-                                letra22.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 2:
-                            letra23.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra23.getStyleClass().clear();
-                                letra23.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra23.getStyleClass().clear();
-                                letra23.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 3:
-                            letra24.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra24.getStyleClass().clear();
-                                letra24.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra24.getStyleClass().clear();
-                                letra24.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                        case 4:
-                            letra25.setText(letra.toUpperCase());
-                            if (comprobarAciertoLetra(letra, i) == 1) {
-                                letra25.getStyleClass().clear();
-                                letra25.getStyleClass().add("letraPosicionAcertada");
-                            } else if (comprobarAciertoLetra(letra, i) == 2) {
-                                letra25.getStyleClass().clear();
-                                letra25.getStyleClass().add("letraAcertada");
-                            }
-                            break;
-                    }
+        if(palabra.equals("") || palabra.equals(" ")){
+            palabraFallada.setText("La palabra no puede estar en blanco!");
+            palabraIntroducir.clear();
+        }
+        else if(palabra.length() != 5) {
+            palabraFallada.setText("La palabra debe ser de 5 letras!");
+            palabraIntroducir.clear();
+        }
+        else {
+            palabraIntroducir.clear();
+            if(!aciertoPalabra(palabra)){
+                if(turno < 4){
+                    rellenarLetra(palabra);
+                    turno++;
                 }
-                palabraFallada.setText("¡Has fallado! La palabra era: " + palabraAdivinar);
+                else if(turno >= 4) {
+                    for(int i = 0; i < palabra.length(); i++){
+                        String letra = String.valueOf(palabra.charAt(i));
+                        switch (i){
+                            case 0:
+                                letra21.setText(letra.toUpperCase());
+                                if (comprobarAciertoLetra(letra, i) == 1) {
+                                    letra21.getStyleClass().clear();
+                                    letra21.getStyleClass().add("letraPosicionAcertada");
+                                } else if (comprobarAciertoLetra(letra, i) == 2) {
+                                    letra21.getStyleClass().clear();
+                                    letra21.getStyleClass().add("letraAcertada");
+                                }
+                                break;
+                            case 1:
+                                letra22.setText(letra.toUpperCase());
+                                if (comprobarAciertoLetra(letra, i) == 1) {
+                                    letra22.getStyleClass().clear();
+                                    letra22.getStyleClass().add("letraPosicionAcertada");
+                                } else if (comprobarAciertoLetra(letra, i) == 2) {
+                                    letra22.getStyleClass().clear();
+                                    letra22.getStyleClass().add("letraAcertada");
+                                }
+                                break;
+                            case 2:
+                                letra23.setText(letra.toUpperCase());
+                                if (comprobarAciertoLetra(letra, i) == 1) {
+                                    letra23.getStyleClass().clear();
+                                    letra23.getStyleClass().add("letraPosicionAcertada");
+                                } else if (comprobarAciertoLetra(letra, i) == 2) {
+                                    letra23.getStyleClass().clear();
+                                    letra23.getStyleClass().add("letraAcertada");
+                                }
+                                break;
+                            case 3:
+                                letra24.setText(letra.toUpperCase());
+                                if (comprobarAciertoLetra(letra, i) == 1) {
+                                    letra24.getStyleClass().clear();
+                                    letra24.getStyleClass().add("letraPosicionAcertada");
+                                } else if (comprobarAciertoLetra(letra, i) == 2) {
+                                    letra24.getStyleClass().clear();
+                                    letra24.getStyleClass().add("letraAcertada");
+                                }
+                                break;
+                            case 4:
+                                letra25.setText(letra.toUpperCase());
+                                if (comprobarAciertoLetra(letra, i) == 1) {
+                                    letra25.getStyleClass().clear();
+                                    letra25.getStyleClass().add("letraPosicionAcertada");
+                                } else if (comprobarAciertoLetra(letra, i) == 2) {
+                                    letra25.getStyleClass().clear();
+                                    letra25.getStyleClass().add("letraAcertada");
+                                }
+                                break;
+                        }
+                    }
+                    palabraFallada.setText("¡Has fallado! La palabra era: " + palabraAdivinar);
+                    aciertos = 0;
+                    initialize();
+                }
+            }
+            else if(aciertoPalabra(palabra)){
+                listaPalabras = Arrays.stream(listaPalabras)
+                        .filter(string -> !string.equals(palabraAdivinar))
+                        .toArray(String[]::new);
+                rellenarLetra(palabra);
+                aciertos++;
                 initialize();
             }
-        }
-        else if(aciertoPalabra(palabra)){
-            listaPalabras = Arrays.stream(listaPalabras)
-                    .filter(string -> !string.equals(palabraAdivinar))
-                    .toArray(String[]::new);
-            rellenarLetra(palabra);
-            aciertos++;
-            initialize();
         }
     }
 
