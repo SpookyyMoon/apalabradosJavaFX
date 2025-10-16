@@ -11,6 +11,8 @@ Proyecto llevado a cabo como práctica conjunta para las asignaturas de Interfac
 - Conteo de aciertos - Existe un contador que lleva el conteo de las palabras acertadas.
 - Resltado de letras - Las letras se resaltan en función de si hemos acertado la letra y posición (morado) o si solo hemos acertado que esa letra existe en la palabra (amarillo).
 - Resaltado de letras usadas - Aun que podemos volver a usar las letras, estas se resaltan en la lista de la derecha al ser usadas.
+- Control de errores - Se comprueba que la palabra introducida no esté en blanco y tenga exactamente cinco letras.
+- Popup de victoria y derrota - Al terminar la lista de palabras (30 aciertos) o al fallar se muestra un popup que permite reiniciar el juego.
 
 ---
 
@@ -29,7 +31,7 @@ Proyecto llevado a cabo como práctica conjunta para las asignaturas de Interfac
 <img width="1924" height="1080" alt="image" src="https://github.com/user-attachments/assets/70855206-34e9-4c03-928b-901619d0e302" />
 
 ### Fallo de palabras y reinicio
-<img width="1924" height="1080" alt="image" src="https://github.com/user-attachments/assets/692a3e8a-4a5f-47be-bfd6-5f79c1add243" />
+<img width="1928" height="1076" alt="image" src="https://github.com/user-attachments/assets/a61e2df1-b482-4677-b51d-087860332457" />
 
 ### Acierto de palabra
 <img width="1924" height="1080" alt="image" src="https://github.com/user-attachments/assets/8d8f1f3c-7f75-49a7-a88d-331ec9913955" />
