@@ -8,6 +8,7 @@ import java.util.Random;
 
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 
 public class JuegoController {
 
@@ -24,6 +25,10 @@ public class JuegoController {
             "casco", "grano", "luzco", "sabio", "trigo"
     };
 
+    // Paneles
+    @FXML private Pane oscurecerFondo;
+    @FXML private Pane alertBox;
+
     // Almacenamiento de la palabra a adivinar
     private String palabraAdivinar;
 
@@ -36,6 +41,9 @@ public class JuegoController {
     // Marcador de aciertos
     private int aciertos = 0;
     @FXML private Label contadorAciertosLabel = new Label();
+
+    // Control de errores
+    @FXML private Label controlErrores = new Label();
 
     // Palabra fallada
     @FXML private Label palabraFallada = new Label();
@@ -92,6 +100,9 @@ public class JuegoController {
             letras.get(i).getStyleClass().add("letrasUsables");
         }
 
+        // Paneles
+        oscurecerFondo.setVisible(false);
+        alertBox.setVisible(false);
 
         // Reinicio turnos
         turno = 0;
@@ -100,14 +111,14 @@ public class JuegoController {
 
     @FXML
     protected void palabraAcertar(){
-        palabraFallada.setText(" ");
+        controlErrores.setText(" ");
         String palabra = palabraIntroducir.getText();
         if(palabra.equals("") || palabra.equals(" ")){
-            palabraFallada.setText("La palabra no puede estar en blanco!");
+            controlErrores.setText("La palabra no puede estar en blanco!");
             palabraIntroducir.clear();
         }
         else if(palabra.length() != 5) {
-            palabraFallada.setText("La palabra debe ser de 5 letras!");
+            controlErrores.setText("La palabra debe ser de 5 letras!");
             palabraIntroducir.clear();
         }
         else {
@@ -173,9 +184,10 @@ public class JuegoController {
                                 break;
                         }
                     }
-                    palabraFallada.setText("¡Has fallado! La palabra era: " + palabraAdivinar);
+                    oscurecerFondo.setVisible(true);
+                    alertBox.setVisible(true);
+                    palabraFallada.setText(palabraAdivinar.toUpperCase());
                     aciertos = 0;
-                    initialize();
                 }
             }
             else if(aciertoPalabra(palabra)){
@@ -315,5 +327,11 @@ public class JuegoController {
             case "y" -> y.getStyleClass().setAll("letrasUsadas");
             case "z" -> z.getStyleClass().setAll("letrasUsadas");
         }
+    }
+
+    protected void reiniciarJuego() {
+        oscurecerFondo.setVisible(false);
+        alertBox.setVisible(false);
+        initialize();
     }
 }

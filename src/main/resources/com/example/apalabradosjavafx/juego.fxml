@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -341,15 +342,45 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Label fx:id="contadorAciertosLabel" layoutX="1575.0" layoutY="885.0" text=" ">
+      <Label fx:id="contadorAciertosLabel" layoutX="1575.0" layoutY="884.0" text=" ">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Label fx:id="palabraFallada" alignment="CENTER" contentDisplay="CENTER" layoutX="1241.0" layoutY="935.0" prefHeight="36.0" prefWidth="442.0" style="-fx-text-alignment: center;">
+      <Label fx:id="controlErrores" alignment="CENTER" contentDisplay="CENTER" layoutX="1241.0" layoutY="935.0" prefHeight="36.0" prefWidth="442.0" style="-fx-text-alignment: center;">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
+      <Pane fx:id="oscurecerFondo" layoutX="-12.0" layoutY="-18.0" prefHeight="1114.0" prefWidth="1950.0" styleClass="oscurecerFondo" stylesheets="@style.css" visible="false" />
+      <Pane fx:id="alertBox" layoutX="520.0" layoutY="210.0" prefHeight="624.0" prefWidth="784.0" styleClass="popUpFinalJuego" stylesheets="@style.css" visible="false">
+         <children>
+            <ImageView fitHeight="202.0" fitWidth="425.0" layoutX="179.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@raw/logo.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="307.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Has fallado!">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="179.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La palabra correcta era:">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Label fx:id="palabraFallada" layoutX="527.0" layoutY="360.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="294.0" layoutY="455.0" mnemonicParsing="false" onAction="#palabraAcertar" styleClass="botonProbarPalabra" stylesheets="@style.css" text="Volver a jugar">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
